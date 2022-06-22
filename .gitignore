@@ -4,3 +4,4 @@
 tmp/
 
 /target
+src/ws_client/abi.rs
