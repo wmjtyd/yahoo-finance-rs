@@ -21,7 +21,7 @@ impl Builder {
     }
 
     /// yahoo endpoint url
-    pub fn url(mut self, url: &str) -> Self {
+    pub fn url(mut self, url: String) -> Self {
         self.url = url.to_string();
         self
     }

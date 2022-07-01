@@ -238,7 +238,7 @@ async fn happy_path_ok() {
         .await;
 
     let client = HttpClientBuilder::new()
-        .url(&mock_server.uri())
+        .url(mock_server.uri().clone())
         .build()
         .unwrap();
     let start = DateTime::parse_from_rfc3339("2022-01-01T00:00:00.00Z")
@@ -278,7 +278,7 @@ async fn timeout_fails() {
         .await;
 
     let client = HttpClientBuilder::new()
-        .url(&mock_server.uri())
+        .url(mock_server.uri().clone())
         .timeout(1)
         .build()
         .unwrap();
@@ -321,7 +321,7 @@ async fn invalid_quote_fails() {
         .await;
 
     let client = HttpClientBuilder::new()
-        .url(&mock_server.uri())
+        .url(mock_server.uri().clone())
         .build()
         .unwrap();
     let start = DateTime::parse_from_rfc3339("2022-01-01T00:00:00.00Z")
