@@ -59,6 +59,7 @@ impl WsClient {
                         let data = String::from_utf8(data).report().change_context_lazy(|| {
                             WebsocketStreamError::BinaryDataParseToUtf8Failed
                         })?;
+                        println!("binary data: {}", data);
                         let quote_data = QuoteData::from_str(&data)?;
                         yield quote_data;
                     }

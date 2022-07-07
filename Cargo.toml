@@ -22,6 +22,7 @@ async-prost = "0.4.0"
 futures = "0.3.21"
 url = "2.2.2"
 async-stream = "0.3.3"
+decode = "0.1.0"
 
 [build-dependencies]
 prost-build = "0.8" # 编译 protobuf
